@@ -37,3 +37,10 @@ LGNEP represents a class of problems where the players have their strategy sets 
 
 # Approach to Analyze the Equilibirum
 We typically analyze two-player games using bimatrix representation. Extending this idea to the n-player model, we get an nk matrix. Now, we try to find the expected Mixed Nash Equilibrium payoffs and can analyze the risk vs reward ratio based on the players’ chosen strategy. As the simulation progresses, we capture data from every epoch to extract the price movement of the stocks. Finally, we analyze the payoffs and find the best strategies for a player to choose, like a support vector containing strategies that significantly contribute to mixed Nash equilibrium. We will be solving the game problem at each time epoch due to reasons of computational efficiency. For the same reasons, we will represent the market as groups of people rather than individuals (since the number of groups is significantly lower than the number of individuals)
+
+# Additional Information
+1. We have used the python package Pygambit (Version 16.1.1) for the purpose of this program. The solver used for computation of Mixed equilibrium is Logit solver
+2. The data for stock prices over the past one year is included in prices_data.csv and is extracted from [Yahoo Finance](https://finance.yahoo.com/quote/GOOG/history?period1=1681171200&period2=1712793600)
+3. mean&sigma.npy contains the mean and standard deviation for the next 100 time epochs that we obtain using the Monte Carlo Simulations
+4. lstm_predictions.npy consists of price predictions obtained for a player using the LSTM model 
+5. montecarloVsLSTM.py is a program used to test players following different price generation strategies (Monte Carlo vs LSTM). It gives us a comparison between the profits for players following different these two strategies.
