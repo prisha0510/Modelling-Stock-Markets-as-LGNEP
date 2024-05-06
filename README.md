@@ -3,9 +3,9 @@ This project aims to model the stock market as an LGNEP (Linear Generalised Nash
 We aim to model the stock market and use the techniques of GNEPs (Generalised Nash Equilibrium Problems) to find the expected equilibrium profit and loss of all market participants. Our setup consists of different players with different ideologies; for instance, a retail investor might be interested in short-term investment(that is, his goal can be to make short-term profits), whereas corporate investment banks might have more long-term goals. Based on this, their strategies in the market can be different.
 This is a dynamic game setup, so we consider the game and update variables at each time epoch t. The overall aim is to study the expected equilibrium profits/losses made by each player and analyze them at the end of some time period T .
 # Assumptions
-• We consider each time epoch t to be a day, and we assume that intra-day trading and short selling are not allowed.
-• The time period T is considered to be finite.
-• We assume that the bids/asks are placed for one unit of shares (for instance, one unit might comprise 1000 shares)
+1. We consider each time epoch t to be a day, and we assume that intra-day trading and short selling are not allowed.
+2. The time period T is considered to be finite.
+3. We assume that the bids/asks are placed for one unit of shares (for instance, one unit might comprise 1000 shares)
 
 # Defining the Game and Variables
 Our game setting is dynamic; we consider the game at each epoch. The players in the market vary according to the level of risk they are willing to take, and the difference in their strategy sets denotes this.
@@ -21,8 +21,8 @@ RNNs. In predicting stock prices, LSTMs are employed due to their ability to lea
 stock price data. Historical price data is typically fed into the network as sequential input sequences to predict stock prices using LSTMs. The LSTM learns from these sequences to identify patterns and relationships between past price movements and future price trends. Training the network on historical data and optimizing its parameters can predict future stock prices based on the learned patterns. The model which we have trained consists of 4 layers.
 
 # Execution of Trades
-• We will define a region (spread) and consider the bids and asks in this spread. Let B denote the number of bids in this region, and let A denote the number of asks in this region. Denote M = min(A, B). We will consider the lowest M asks and highest M bids for matching.
-• The price at which the order is executed at the average of M bid and M ask prices
+1. We will define a region (spread) and consider the bids and asks in this spread. Let B denote the number of bids in this region, and let A denote the number of asks in this region. Denote M = min(A, B). We will consider the lowest M asks and highest M bids for matching.
+2. The price at which the order is executed at the average of M bid and M ask prices
 
 # Objective Function
 In this project, we have made 2 variations of the game problem
