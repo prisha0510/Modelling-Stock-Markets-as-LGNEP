@@ -44,3 +44,4 @@ We typically analyze two-player games using bimatrix representation. Extending t
 3. mean&sigma.npy contains the mean and standard deviation for the next 100 time epochs that we obtain using the Monte Carlo Simulations
 4. lstm_predictions.npy consists of price predictions obtained for a player using the LSTM model 
 5. montecarloVsLSTM.py is a program used to test players following different price generation strategies (Monte Carlo vs LSTM). It gives us a comparison between the profits for players following different these two strategies.
+6. We have considered a timeline consisting of 100 time epochs.
